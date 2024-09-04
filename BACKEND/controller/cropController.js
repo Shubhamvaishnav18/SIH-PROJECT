@@ -1,4 +1,4 @@
-const mo
+
 
 const getAllProduct = (req,res)=>{
     

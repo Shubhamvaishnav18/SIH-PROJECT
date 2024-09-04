@@ -10,15 +10,18 @@ const userSchema = new mongoose.Schema({
         required: [true,'Email is required '],
         unique: true
     },
-    contactNo:{ type :String },
+    contactNo:{ 
+        type :String ,
+        required: [true,'Contact number is required '],
+    },
     password: {
         type: String,
         required: [true,'Password is required for account security'],
     }
 },{ timestamps: true });
 
-const User = mongoose.model("User", userSchema);
+const UserModel = mongoose.model("User", userSchema);
 
 module.exports = {
-    User,
+    UserModel
 };

@@ -1,12 +1,12 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-const cropSchema = new mongoose.Schema({
-    cropName :{
-        type: String,
-        required: true,
-        trim: true,
-    }
-},{ timestamps: true })
+// const cropSchema = new mongoose.Schema({
+//     cropName :{
+//         type: String,
+//         required: true,
+//         trim: true,
+//     }
+// },{ timestamps: true })
 
 const crop = mongoose.model("crop",cropSchema);
 
@@ -17,12 +17,10 @@ const cropListingSchema = new mongoose.Schema({
         required: true,
 
     },
-    crop : {
-        cropId: { 
-            type: mongoose.Schema.Types.ObjectId, 
-            ref: `Crop`,
-        },
-        cropName: String,
+    cropName : {
+        type: String,
+        required: true,
+        trim: true,
     },
     quantity : {
         type: Number,
