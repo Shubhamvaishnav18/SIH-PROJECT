@@ -17,7 +17,7 @@ document.getElementById('myForm').addEventListener('submit', async function(even
     
 try{
 
-    const res = await fetch('http://localhost:3000/submit-form', {
+    const res = await fetch('https://sih-project-rho.vercel.app/submit-form', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
