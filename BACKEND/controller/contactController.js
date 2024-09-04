@@ -1,7 +1,10 @@
 const {contactModel} = require("../model/contactModel")
-
+// todo:-
+// 1>save contact first
+// 2>Send email notification(confirm with subham first)
 const saveContact = async(req,res)=>{
     const { name, email, number } = req.body;
+    console.log(req.body);
 
     try {
         // Create a new contact document
