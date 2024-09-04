@@ -6,7 +6,7 @@ const checkUserAuth = require('./middleware/authMiddleware.js')
 const authRouter = require("./routes/authRoutes.js");
 const userRouter = require("./routes/userRoutes.js");
 const connectDB = require("./config/db.js");
-
+const contactUs = require("./routes/contactRoutes.js")
 const app = express();
 
 
@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: true })); // For parsing application/x-ww
 
 app.use("/auth", authRouter);
 app.use('/profile', userRouter);
+app.use("/submit-form", contactUs);
 const port = process.env.PORT
 app.listen(port, () => console.log("server started"));
 

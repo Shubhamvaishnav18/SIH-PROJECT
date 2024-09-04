@@ -8,7 +8,7 @@
 //     }
 // },{ timestamps: true })
 
-const crop = mongoose.model("crop",cropSchema);
+// const crop = mongoose.model("crop",cropSchema);
 
 const cropListingSchema = new mongoose.Schema({
     userId : {
@@ -46,6 +46,6 @@ const cropListingSchema = new mongoose.Schema({
 const cropListing = mongoose.model("cropListing",cropListingSchema);
 
 module.exports = {
-    crop,
+    // crop,
     cropListing
 }
