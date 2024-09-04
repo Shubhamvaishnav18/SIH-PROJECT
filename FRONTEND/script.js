@@ -31,3 +31,24 @@ try{
 }
     // console.log(res);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('myForm');
+    const spinner = document.getElementById('spinner');
+    const button = document.querySelector('.btn');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        spinner.style.display = 'flex'; // Show the spinner
+        button.classList.add('loading'); // Add loading class to disable button
+
+        // Simulate form submission or send data via AJAX
+        setTimeout(() => {
+            // Simulate form submission delay
+            form.submit(); // Proceed with actual form submission
+        }, 2000); // Adjust time as needed or replace with AJAX request
+    });
+});
+
+
